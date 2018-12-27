@@ -2,18 +2,25 @@ html,
 body {
   height: 100%;
   width: 100%;
+  background-color: #bd8648;
+  font-family: "Lato", sans-serif;
+  word-wrap: break-word;
+
 }
 
-body {
-  background-color: #bdbdbd;
-}
-
-.sec {
-  background-color: #99badd;
+.sect {
+  background-color: #ffffff;
 }
 
 #nav {
-  background-color: whitesmoke;
+  background-color: #ffffff;
+}
+
+hr {
+  height: 2px;
+  color: #000;
+  background-color: #000;
+  border: none;
 }
 
 nav ul a,
@@ -30,12 +37,12 @@ a:focus {
 }
 
 .sidenav-trigger {
-  color: #283593;
+  color: #bd8648;
 }
 
 .sect {
   position: relative;
-  background-color: #99badd;
+  background-color: whitesmoke;
 }
 
 .header {
@@ -67,7 +74,6 @@ a:focus {
 }
 
 @media only screen and (max-width: 1000px) {
-
   .about-pic {
     max-width: 50%;
   }
@@ -95,15 +101,15 @@ a:focus {
 
 /* Change parallax background images */
 #parallax-ctr0 {
-  background-image: url('/assets/images/wilson.jpg');
+  background-image: url("/assets/images/wilson.jpg");
 }
 
 #parallax-ctr1 {
-  background-image: url('/assets/images/contact-me.jpg');
+  background-image: url("/assets/images/contact-me.jpg");
 }
 
 #parallax-ctr2 {
-  background-image: url('/assets/story/Falcon-Children-Home.jpg');
+  background-image: url("/assets/story/Falcon-Children-Home.jpg");
 }
 
 #parallax0,
@@ -120,7 +126,6 @@ a:focus {
 
 @media only screen and (max-width: 992px) {
   .parallax-container .section {
-    position: absolute;
     top: 40%;
   }
 
@@ -237,7 +242,9 @@ input:-webkit-autofill {
   transition: 0.3s;
 }
 
-.column-media img:hover {opacity: 0.7;}
+.column-media img:hover {
+  opacity: 0.7;
+}
 
 /* The Modal (background) */
 .modal {
@@ -248,8 +255,8 @@ input:-webkit-autofill {
   top: 0;
   width: 100%;
   min-height: 100%;
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
 }
 
 /* Modal Content (Image) */
@@ -273,14 +280,19 @@ input:-webkit-autofill {
 }
 
 /* Add Animation - Zoom in the Modal */
-.modal-content, #caption { 
+.modal-content,
+#caption {
   animation-name: zoom;
   animation-duration: 0.6s;
 }
 
 @keyframes zoom {
-  from {transform:scale(0)} 
-  to {transform:scale(1)}
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 /* The Close Button */
@@ -303,7 +315,7 @@ input:-webkit-autofill {
 }
 
 /* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px){
+@media only screen and (max-width: 700px) {
   .modal-content {
     width: 100%;
   }
@@ -330,6 +342,50 @@ input:-webkit-autofill {
   padding: 10px;
 }
 
-p {
-  word-wrap: break-word;
+/* Blogs */
+.row-blog {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+.column-blog {
+  flex: 50%;
+  padding: 0 4px;
+  text-align: left;
+}
+
+.blog-title {
+  text-align: center;
+}
+
+.blog-text {
+  font-size: 18px;
+  margin-left: 2.5%;
+  margin-right: 2.5%;
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.blog-img-right {
+  float: right;
+}
+
+.prev-blog {
+  text-align: left;
+}
+
+.prev-blog a,
+.next-blog a,
+.column-blog a {
+  color: rgb(94, 93, 93);
+}
+
+.prev-blog a:hover,
+.next-blog a:hover,
+.column-blog a:hover {
+  color: black;
+}
+
+.next-blog {
+  text-align: right;
 }
