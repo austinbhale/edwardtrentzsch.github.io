@@ -86,7 +86,9 @@ a:focus {
 }
 
 @media only screen and (min-width: 601px) {
-  .parallax-container {
+  .parallax-container0,
+  .parallax-container1,
+  .parallax-container2 {
     width: 90%;
   }
 
@@ -100,15 +102,15 @@ a:focus {
 }
 
 /* Change parallax background images */
-#parallax-ctr0 {
+.parallax-container0 {
   background-image: url("/assets/images/wilson.jpg");
 }
 
-#parallax-ctr1 {
+.parallax-container1 {
   background-image: url("/assets/images/contact-me.jpg");
 }
 
-#parallax-ctr2 {
+.parallax-container2 {
   background-image: url("/assets/story/Falcon-Children-Home.jpg");
 }
 
@@ -124,8 +126,15 @@ a:focus {
   display: none;
 }
 
+.parallax-hdr {
+  position: relative;
+  z-index: 1000;
+}
+
 @media only screen and (max-width: 992px) {
-  .parallax-container .section {
+  .parallax-container0 .section,
+  .parallax-container1 .section
+  .parallax-container2 .section {
     top: 40%;
   }
 
@@ -355,8 +364,26 @@ input:-webkit-autofill {
   text-align: left;
 }
 
+.column-blog img {
+  display: block;
+  position: relative;
+  max-width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
+
 .blog-title {
   text-align: center;
+}
+
+/* PDF's under Projects page */
+.blog-title embed {
+  width: 75%;
+  height: 500px;
+}
+
+.blog-date {
+  font-size: 12px;
 }
 
 .blog-text {

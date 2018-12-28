@@ -12,9 +12,9 @@ $(function() {
     if (isMobile) {
       $("#parallax-mobile" + i).css("display", "block");
       $("#parallax-ctr" + i)
-        .removeClass("parallax-container")
+        .removeClass("parallax-container" + i)
         .addClass("noparallax-container");
-    } else {
+      } else {
       $("#parallax" + i).css("display", "block");
     }
   }
