@@ -3493,6 +3493,7 @@ table span.badge {
 
 .section.no-pad-bot {
   padding-bottom: 0;
+  margin: 0 auto;
 }
 
 .section.no-pad-top {

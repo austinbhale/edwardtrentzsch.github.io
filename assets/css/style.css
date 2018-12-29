@@ -5,7 +5,6 @@ body {
   background-color: #bd8648;
   font-family: "Lato", sans-serif;
   word-wrap: break-word;
-
 }
 
 .sect {
@@ -133,8 +132,7 @@ a:focus {
 
 @media only screen and (max-width: 992px) {
   .parallax-container0 .section,
-  .parallax-container1 .section
-  .parallax-container2 .section {
+  .parallax-container1 .section .parallax-container2 .section {
     top: 40%;
   }
 
@@ -272,7 +270,7 @@ input:-webkit-autofill {
 .modal-content {
   margin: auto;
   display: block;
-  max-width: 80%;
+  max-width: 75%;
   height: auto;
 }
 
@@ -374,6 +372,9 @@ input:-webkit-autofill {
 
 .blog-title {
   text-align: center;
+  text-transform: uppercase;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 /* PDF's under Projects page */
@@ -393,12 +394,16 @@ input:-webkit-autofill {
   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
-.blog-img-right {
+.blog-image {
   float: right;
+  max-width: 50%;
+  height: auto;
+  padding: 7px;
 }
 
 .prev-blog {
   text-align: left;
+  text-transform: uppercase;
 }
 
 .prev-blog a,
@@ -415,4 +420,5 @@ input:-webkit-autofill {
 
 .next-blog {
   text-align: right;
+  text-transform: uppercase;
 }
