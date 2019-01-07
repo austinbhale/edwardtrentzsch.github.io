@@ -33,28 +33,30 @@
       media="screen,projection"
     />
   </head>
-
   <body>
     <nav id="nav" class="fixed-top" role="navigation">
       <div class="nav-wrapper container">
-        <a id="logo-container" href="#" class="brand-logo hide-on-med-and-down"
+        <a
+          id="logo-container"
+          href="index.html"
+          class="brand-logo hide-on-med-and-down"
           >ET</a
         >
         <ul class="right hide-on-med-and-down">
           <li><a class="black-text" href="about.html">About</a></li>
           <li><a class="black-text" href="projects.html">Projects</a></li>
           <li><a class="black-text" href="blog.html">Blog</a></li>
-          <li><a class="black-text" href="photography.html">Photography</a></li>
+          <li><a class="black-text" href="#">Photography</a></li>
           <li><a class="black-text" href="story.html">Story</a></li>
           <li><a class="black-text" href="contact.html">Contact</a></li>
         </ul>
 
         <ul id="nav-mobile" class="sidenav">
-          <li><a href="#">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="projects.html">Projects</a></li>
           <li><a href="blog.html">Blog</a></li>
-          <li><a class="black-text" href="photography.html">Photography</a></li>
+          <li><a class="black-text" href="#">Photography</a></li>
           <li><a class="black-text" href="story.html">Story</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -64,33 +66,56 @@
       </div>
     </nav>
 
-    <div id="parallax-ctr0" class="parallax-container0 valign-wrapper container">
-      <div class="section no-pad-bot">
-        <div class="parallax-hdr">
-          <h3 class="header white-text selectDisable">Edward Trentzsch</h3>
-          <h5 class="header white-text selectDisable">Student</h5>
-          <h5 class="header white-text selectDisable">
-            Journalism - UNC Chapel Hill
-          </h5>
+    <div class="container sect">
+      <div class="section">
+        <div class="media-ctr">
+          <br /><br /><br />
+          <div class="row-media">
+            <div class="column-media">
+              <img
+                id="img0"
+                alt="Aquarium"
+                src="assets/images/Fish-tank.jpg"
+              />
+              <img
+                id="img1"
+                alt="Franklin Street"
+                src="assets/images/Franklin.jpg"
+              />
+              <img
+              id="img2"
+              alt="Dean Dome"
+              src="assets/images/dean-dome.jpg"
+            />
+            </div>
+            <div class="column-media">
+              <img
+                id="img3"
+                alt="Myrtle Beach"
+                src="assets/images/Myrtle.jpg"
+              />
+              <img
+                id="img4"
+                alt="Snow Day"
+                src="assets/images/Snow-day.jpg"
+              />
+              <img
+              id="img5"
+              alt="Boone"
+              src="assets/images/boone-3.jpg"
+            />
+            </div>
+          </div>
+          <br /><br />
         </div>
-      </div>
-      <div id="parallax0" class="parallax"></div>
-      <div id="parallax-mobile0" class="noparallax">
-        <img src="assets/images/wilson.jpg" />
       </div>
     </div>
 
-    <div class="sect container" style="text-align: center">
-      <div class="section">
-        <h5>HOME</h5>
-        <hr>
-        <p>
-          Welcome to my personal portfolio website! This site contains all of
-          the information there is to know about me, including my passions and
-          skills. Please feel free to use the menu above to explore, and I hope
-          you enjoy!
-        </p>
-      </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01" style="display: none" />
+      <div id="caption"></div>
     </div>
 
     <footer
@@ -122,5 +147,28 @@
     <script src="assets/js/main.js"></script>
     <script src="materialize/js/materialize.js"></script>
     <script src="materialize/js/init.js"></script>
+    <script>
+      $(function() {
+        $(".column-media").click(function(event) {
+          if (event.target.id == "") {
+            return;
+          }
+          var img = document.getElementById("" + event.target.id);
+          $("#myModal").css("display", "block");
+
+          $("#img01").css("display", "block");
+          document.getElementById("img01").src = img.src;
+          document.getElementById("caption").innerHTML = img.alt;
+
+          $("#nav").css("display", "none");
+        });
+      });
+
+      document.getElementsByClassName("close")[0].onclick = function() {
+        $("#myModal").css("display", "none");
+        $("#nav").css("display", "block");
+        $("#img01").css("display", "none");
+      };
+    </script>
   </body>
 </html>
